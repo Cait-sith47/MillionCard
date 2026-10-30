@@ -14,6 +14,7 @@ import secrets
 import string
 import struct
 import sys
+import traceback
 from pathlib import Path
 
 if sys.platform == "win32":
@@ -175,13 +176,14 @@ async def reject_room_battle(room: dict, offender_role: str, reason: str):
     """両方の画面へ中断を通知し、この部屋の対戦操作を停止します。"""
     room["protocol_failed"] = True
     offender_side = side_for_role(offender_role)
-    abort_data = {"type": "sync_abort", "reason": reason}
+    print(f"[BATTLE-REJECT] room={room.get('room_id', 'unknown')} role={offender_role} side={offender_side} reason={reason}", flush=True)
+    abort_data = {"type": "sync_abort", "reason": reason, "offender_side": offender_side}
     for recipient_role in ("host", "guest"):
         participant = room.get(recipient_role)
         if participant and participant[0]:
             await send_msg(participant[0], {
                 "type": "relay",
-                "sender_side": offender_side,
+                "sender_side": "server",
                 "data": abort_data,
             })
 
@@ -346,6 +348,7 @@ async def handle_client(reader: asyncio.StreamReader, writer: asyncio.StreamWrit
 
                 player_info = sanitize_player_info(msg.get("player_info", {}), "ホスト")
                 rooms[room_id] = {
+                    "room_id": room_id,
                     "host": (writer, player_info),
                     "guest": None,
                     "battle_started": False,
@@ -599,8 +602,10 @@ async def handle_client(reader: asyncio.StreamReader, writer: asyncio.StreamWrit
                                 await reject_room_battle(room, role, "配置操作の形式を確認できませんでした。")
                                 continue
                             lane_ids = [lanes.get("left"), lanes.get("center"), lanes.get("right")]
-                            if any(not isinstance(card_id, str) or not card_id or len(card_id) > 128 or card_id not in CHARACTER_CATALOG for card_id in lane_ids) or len(set(lane_ids)) != 3:
-                                await reject_room_battle(room, role, "配置するカードを確認できませんでした。")
+                            unknown_ids = [card_id for card_id in lane_ids if not isinstance(card_id, str) or not card_id or len(card_id) > 128 or card_id not in CHARACTER_CATALOG]
+                            if unknown_ids or len(set(lane_ids)) != 3:
+                                reason = "配置カードIDをサーバーの一覧で確認できませんでした: %s（サーバー側のcharacter_catalog.jsonが古い可能性があります）" % (", ".join(str(card_id) for card_id in unknown_ids) if unknown_ids else "重複")
+                                await reject_room_battle(room, role, reason)
                                 continue
                             if not isinstance(disks, dict) or set(disks.keys()) != {"left", "center", "right"} or any(not isinstance(disks.get(lane), str) or len(disks[lane]) > 128 for lane in ("left", "center", "right")):
                                 await reject_room_battle(room, role, "配置したカードのディスク情報を確認できませんでした。")
@@ -661,6 +666,9 @@ async def handle_client(reader: asyncio.StreamReader, writer: asyncio.StreamWrit
 								"data": data
                             })
 
+    except Exception:
+        print(f"[CLIENT-ERROR] peer={peer_name} room_role={client_rooms.get(writer, ('', 'unknown'))}", flush=True)
+        traceback.print_exc()
     finally:
         # 切断処理
         if writer in client_rooms:

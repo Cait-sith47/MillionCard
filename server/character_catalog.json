@@ -1,5 +1,6 @@
 {
 	"akane": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Da",
 		"card_image_path": "res://assets/cards/characters/野々原 茜.png",
 		"dex": 9,
@@ -47,21 +48,74 @@
 		},
 		"type": "Angel"
 	},
+	"ami": {
+		"affiliation": "AS",
+		"attribute": "Vi",
+		"card_image_path": "res://assets/cards/characters/双海亜美.png",
+		"dex": 10,
+		"dice_actions": {
+			"1": {
+				"damage": 500,
+				"description": "相手1人に500ダメージを与える。",
+				"effect": "futami_tostostaa",
+				"name": "スタ→トスタ→",
+				"target": "any"
+			},
+			"2": {
+				"description": "味方全体のHPを、この試合中に『スタ→トスタ→』を使った回数×100（最大500）回復する。回復しきれない分はバリアになる。",
+				"effect": "ami_hohoenda",
+				"name": "微笑んだから、気付いたんだ。"
+			},
+			"3": {
+				"description": "味方全体のHPを、この試合中に『スタ→トスタ→』を使った回数×100（最大500）回復する。回復しきれない分はバリアになる。",
+				"effect": "ami_hohoenda",
+				"name": "微笑んだから、気付いたんだ。"
+			},
+			"4": {
+				"description": "次のラウンド中、『スタ→トスタ→』を使った回数と同じ回数だけ技ロールを振り直せる。",
+				"effect": "ami_onstage_player",
+				"name": "オンステージ・プレイヤー！"
+			},
+			"5": {
+				"description": "次のラウンド中、『スタ→トスタ→』を使った回数と同じ回数だけ技ロールを振り直せる。",
+				"effect": "ami_onstage_player",
+				"name": "オンステージ・プレイヤー！"
+			},
+			"6": {
+				"damage": 300,
+				"description": "相手1人に300ダメージを与える。次の自身の行動では『スタ→トスタ→』を使う。",
+				"effect": "futami_force_tostostaa",
+				"name": "ユニーク・スターズ・オン・ステージ",
+				"target": "any"
+			}
+		},
+		"futami_tostostaa_count": 0,
+		"hp": 700,
+		"name": "双海 亜美",
+		"shop_price": 800,
+		"skill": {
+			"active_skill": "futami_ami_force_tostostaa",
+			"description": "試合開始時、自身に800のバリアを張る。行動前にアイテム使用権を消費すると、次に使う技を『スタ→トスタ→』にする。",
+			"name": "双子 A"
+		},
+		"type": "Angel"
+	},
 	"anna_off": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Vo",
 		"card_image_path": "res://assets/cards/characters/望月杏奈OFF.png",
 		"dex": 1,
 		"dice_actions": {
 			"1": {
 				"damage": 300,
-				"description": "相手全体に300ダメージを与える。その後望むなら『望月杏奈ON』に切り替える（切り替えた場合、次ラウンド中の被ダメージ-200）。",
+				"description": "相手全体に300ダメージを与える。その後望むなら『望月杏奈ON』に切り替える（切り替えた場合、次ラウンド中の受けるダメージ-200）。",
 				"effect": "anna_enter_pleasure",
 				"name": "ENTER→PLEASURE",
 				"target": "all_opponents"
 			},
 			"2": {
 				"damage": 300,
-				"description": "相手全体に300ダメージを与える。その後望むなら『望月杏奈ON』に切り替える（切り替えた場合、次ラウンド中の被ダメージ-200）。",
+				"description": "相手全体に300ダメージを与える。その後望むなら『望月杏奈ON』に切り替える（切り替えた場合、次ラウンド中の受けるダメージ-200）。",
 				"effect": "anna_enter_pleasure",
 				"name": "ENTER→PLEASURE",
 				"target": "all_opponents"
@@ -72,12 +126,12 @@
 				"name": "スポットライト・ミラーランド"
 			},
 			"4": {
-				"description": "次の自身のターン開始時まで、味方全体の被ダメージを-200する。",
+				"description": "次の自身のターン開始時まで、味方全員が受けるダメージを-200する。",
 				"effect": "anna_pretty_dreamer",
 				"name": "PRETTY DREAMER"
 			},
 			"5": {
-				"description": "次の自身のターン開始時まで、味方全体の被ダメージを-200する。",
+				"description": "次の自身のターン開始時まで、味方全員が受けるダメージを-200する。",
 				"effect": "anna_pretty_dreamer",
 				"name": "PRETTY DREAMER"
 			},
@@ -98,6 +152,7 @@
 		"type": "Angel"
 	},
 	"anna_on": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Vo",
 		"card_image_path": "res://assets/cards/characters/望月杏奈ON.png",
 		"dex": 10,
@@ -148,18 +203,19 @@
 		"hp": 1200,
 		"name": "望月杏奈(ON)",
 		"skill": {
-			"description": "お互いヘイトが無効になる。味方アイドル全員の与えるダメージ+100。",
+			"description": "お互いヘイトが無効になる。味方アイドル全員が与えるダメージ+100。",
 			"name": "スイッチON"
 		},
 		"type": "Angel"
 	},
 	"arisa": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Vo",
 		"card_image_path": "res://assets/cards/characters/松田ありさ.png",
 		"dex": 9,
 		"dice_actions": {
 			"1": {
-				"description": "味方1人に永続ヘイトを付与し、試合終了までそのアイドルの与ダメージを永続的に+200する（重複可能）。",
+				"description": "味方1人に永続ヘイトを付与し、試合終了までそのアイドルの与えるダメージを永続的に+200する（重複可能）。",
 				"effect": "arisa_cho_genki",
 				"name": "チョー↑元気Show☆アイドルch@ng!"
 			},
@@ -207,13 +263,14 @@
 		"type": "Princess"
 	},
 	"ayumu": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Da",
 		"card_image_path": "res://assets/cards/characters/舞浜歩.png",
 		"dex": 8,
 		"dice_actions": {
 			"1": {
 				"damage": 600,
-				"description": "相手1人に600ダメージを与える。このラウンド中に自身がダメージを受ける際、ダイスで1・2が出ればダメージを無効化する。",
+				"description": "相手1人に600ダメージを与える。このラウンド中に自身がダメージを受ける際、サイコロで1・2が出ればダメージを無効化する。",
 				"effect": "ayumu_unison_beat",
 				"name": "ユニゾン☆ビート",
 				"target": "any"
@@ -255,12 +312,119 @@
 		"hp": 1200,
 		"name": "舞浜歩",
 		"skill": {
-			"description": "『ダンシングシューズ』『スポーツドリンク』を使用したラウンド中、自身はダメージを受けなくなる。以下の効果を試合中に一回発動できる。捨て札の『ダンシングシューズ』『スポーツドリンク』を手札に加える。",
+			"description": "『ダンシングシューズ』『スポーツドリンク』を使用したラウンド中、自身はダメージを受けなくなる。以下の効果を試合中に1回発動できる。捨て札の『ダンシングシューズ』『スポーツドリンク』を手札に加える。",
 			"name": "ダンシングパフォーマー"
 		},
 		"type": "Princess"
 	},
+	"azusa": {
+		"affiliation": "AS",
+		"attribute": "Vi",
+		"card_image_path": "res://assets/cards/characters/三浦 あずさ.png",
+		"dex": 1,
+		"dice_actions": {
+			"1": {
+				"description": "味方全体のHPを400回復し、次の自身のターン開始時までヘイトを得る。その後サイコロを振る。次のラウンド中、味方は行動前にこの出目を使い、技決定ロールを決められる（味方1人につき1回）。",
+				"effect": "azusa_lovely",
+				"name": "ラブリ"
+			},
+			"2": {
+				"description": "味方全体のHPを400回復し、次の自身のターン開始時までヘイトを得る。その後サイコロを振る。次のラウンド中、味方は行動前にこの出目を使い、技決定ロールを決められる（味方1人につき1回）。",
+				"effect": "azusa_lovely",
+				"name": "ラブリ"
+			},
+			"3": {
+				"description": "山札から1枚引き、次の自身のターン開始時までヘイトを得る。味方全体のスタン・プレッシャー・被ダメージ増加を解除する。",
+				"effect": "azusa_i_do",
+				"name": "I DO"
+			},
+			"4": {
+				"description": "山札から1枚引き、次の自身のターン開始時までヘイトを得る。味方全体のスタン・プレッシャー・被ダメージ増加を解除する。",
+				"effect": "azusa_i_do",
+				"name": "I DO"
+			},
+			"5": {
+				"description": "自身のHPを100刻みで最大1000減らす。選んだ味方1人を減らしたHP分回復し、回復上限を超えた分はバリアにする。",
+				"effect": "azusa_nageki_fanction",
+				"name": "嘆きのFANCTION"
+			},
+			"6": {
+				"description": "左隣の味方が次の自身のターン開始時まで受けるダメージを300軽減する。",
+				"effect": "azusa_tonari",
+				"name": "隣に…"
+			}
+		},
+		"hp": 1600,
+		"name": "三浦 あずさ",
+		"shop_price": 1200,
+		"skill": {
+			"description": "味方が技に失敗した時、その味方は1ターンに1回、すぐに再行動できます。毎ラウンド開始時にサイコロを振り、出目と同じ技決定ロールを出した相手の技はラウンド終了時まで失敗します。",
+			"name": "方向音痴で迷子"
+		},
+		"type": "Angel"
+	},
+	"chihaya": {
+		"affiliation": "AS",
+		"attribute": "Vo",
+		"card_image_path": "res://assets/cards/characters/如月千早.png",
+		"dex": 4,
+		"dice_actions": {
+			"1": {
+				"description": "相手1人に無条件200ダメージを与える。自身が中央にいる場合、ダメージが500増える。",
+				"effect": "chihaya_yakusoku",
+				"name": "約束",
+				"target": "any",
+				"unconditional_damage": 200
+			},
+			"2": {
+				"bonus_if_target_center": 200,
+				"description": "相手1人に無条件200ダメージを与える。対象が中央にいる場合、ダメージが無条件で200増える。",
+				"effect": "chihaya_aoi_tori",
+				"name": "蒼い鳥",
+				"target": "any",
+				"unconditional_damage": 200
+			},
+			"3": {
+				"bonus_if_target_center": 200,
+				"description": "相手1人に無条件200ダメージを与える。対象が中央にいる場合、ダメージが無条件で200増える。",
+				"effect": "chihaya_aoi_tori",
+				"name": "蒼い鳥",
+				"target": "any",
+				"unconditional_damage": 200
+			},
+			"4": {
+				"bonus_if_target_center": 200,
+				"description": "相手1人に無条件200ダメージを与える。対象が中央にいる場合、ダメージが無条件で200増える。",
+				"effect": "chihaya_aoi_tori",
+				"name": "蒼い鳥",
+				"target": "any",
+				"unconditional_damage": 200
+			},
+			"5": {
+				"description": "次の自身の行動で、サイコロを振らずに『約束』を任意で使用できる。望むなら中央へ移動する（中央の味方と位置を入れ替える）。",
+				"effect": "chihaya_snow_white",
+				"name": "Snow White"
+			},
+			"6": {
+				"description": "自身のHPを300回復する。回復しきれない分はバリアになる。",
+				"effect": "chihaya_sleeping_princess",
+				"name": "眠り姫"
+			}
+		},
+		"hp": 1200,
+		"name": "如月千早",
+		"shop_price": 800,
+		"skill": {
+			"description": "自身の無条件ダメージに、ダメージ上昇補正が加算される。試合開始時、手札に『歌姫のカメラ』を加える。",
+			"name": "歌姫",
+			"starting_special_items": {
+				"songstress_camera": 1
+			}
+		},
+		"type": "Fairy"
+	},
 	"chizuru": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Vi",
 		"card_image_path": "res://assets/cards/characters/二階堂千鶴.png",
 		"dex": 5,
@@ -315,6 +479,7 @@
 		"type": "Fairy"
 	},
 	"elena": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Da",
 		"card_image_path": "res://assets/cards/characters/島原エレナ.png",
 		"dex": 10,
@@ -330,12 +495,12 @@
 				"name": "ファンタジスタ・カーニバル"
 			},
 			"3": {
-				"description": "【効果を選択】『味方全体にアピールポイントを1点付与』または『アピールポイントがある味方全員の与ダメージを次の自身のターン開始まで+300』のどちらかを選択して発動する。",
+				"description": "【効果を選択】『味方全体にアピールポイントを1点付与』または『アピールポイントがある味方全員が与えるダメージを次の自身のターン開始まで+300』のどちらかを選択して発動する。",
 				"effect": "elena_shakunetsu",
 				"name": "シャクネツのパレード"
 			},
 			"4": {
-				"description": "【効果を選択】『味方全体にアピールポイントを1点付与』または『アピールポイントがある味方全員の与ダメージを次の自身のターン開始まで+300』のどちらかを選択して発動する。",
+				"description": "【効果を選択】『味方全体にアピールポイントを1点付与』または『アピールポイントがある味方全員が与えるダメージを次の自身のターン開始まで+300』のどちらかを選択して発動する。",
 				"effect": "elena_shakunetsu",
 				"name": "シャクネツのパレード"
 			},
@@ -347,7 +512,7 @@
 				"target": "front"
 			},
 			"6": {
-				"description": "自身のアピールポイントが3以上なら発動可能。相手1人に400ダメージを与え、次の自身のターンに2回連続行動する。",
+				"description": "相手1人に400ダメージを与え、次の自身のターンに2回連続行動する。",
 				"effect": "elena_ai_no_magic",
 				"name": "愛のMagic! Once Again!"
 			}
@@ -361,6 +526,7 @@
 		"type": "Angel"
 	},
 	"emily": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Da",
 		"card_image_path": "res://assets/cards/characters/エミリー.png",
 		"dex": 1,
@@ -400,12 +566,66 @@
 		"hp": 1200,
 		"name": "エミリー",
 		"skill": {
-			"description": "1試合に一回、相手アイドルターンに発動できる。技決定ロールをやり直させる。",
+			"description": "1試合に1回、相手アイドルターンに発動できる。技決定ロールをやり直させる。",
 			"name": "大和撫子"
 		},
 		"type": "Princess"
 	},
+	"frederica": {
+		"affiliation": "シンデレラガールズ",
+		"attribute": "Da",
+		"card_image_path": "res://assets/cards/characters/宮本フレデリカ.png",
+		"dex": 5,
+		"dice_actions": {
+			"1": {
+				"damage": 500,
+				"description": "相手1人に500ダメージを与える。その後、相手の手札をランダムに1枚公開する。",
+				"effect": "frederica_cafe_au_lait",
+				"name": "き・ま・ぐ・れ☆Café au lait!",
+				"target": "any"
+			},
+			"2": {
+				"damage": 500,
+				"description": "相手1人に500ダメージを与える。その後、相手の手札をランダムに1枚公開する。",
+				"effect": "frederica_cafe_au_lait",
+				"name": "き・ま・ぐ・れ☆Café au lait!",
+				"target": "any"
+			},
+			"3": {
+				"damage": 200,
+				"description": "相手1人に200ダメージを与える。相手の公開された手札が2枚以上ある場合、山札からアイテムカードを1枚引く。",
+				"effect": "frederica_neko_yameruyo",
+				"name": "フレデリカ、猫やめるよ",
+				"target": "any"
+			},
+			"4": {
+				"damage": 200,
+				"description": "相手1人に200ダメージを与える。相手の公開された手札が2枚以上ある場合、山札からアイテムカードを1枚引く。",
+				"effect": "frederica_neko_yameruyo",
+				"name": "フレデリカ、猫やめるよ",
+				"target": "any"
+			},
+			"5": {
+				"damage": 300,
+				"description": "正面の相手に300ダメージを与える。",
+				"name": "クレイジークレイジー",
+				"target": "front"
+			},
+			"6": {
+				"description": "山札からアイテムカードを1枚引く。望むなら、引いたカードと相手の手札をそれぞれ1枚公開する。",
+				"effect": "shiki_nijiiro_letters",
+				"name": "虹色letters"
+			}
+		},
+		"hp": 1200,
+		"name": "宮本フレデリカ",
+		"skill": {
+			"description": "相手の公開された手札1枚につき、自身が与えるダメージが100増える。試合中1回、自分のターン開始時に使えます。お互いの手札と捨て札をそれぞれの山札に戻してシャッフルし、3枚ずつ引きます。その後、相手の手札を1枚公開します。",
+			"name": "プロヴァンス風味味噌汁"
+		}
+	},
 	"fuka": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Vi",
 		"card_image_path": "res://assets/cards/characters/豊川風香.png",
 		"dex": 2,
@@ -416,22 +636,22 @@
 				"name": "bitter sweet"
 			},
 			"2": {
-				"description": "味方1人を指定する。次のラウンド終了時まで、その味方の被ダメージを-300し、スタンを無効にする。",
+				"description": "味方1人を指定する。次のラウンド終了時まで、その味方の受けるダメージを-300し、スタンを無効にする。",
 				"effect": "fuka_inori_no_hane",
 				"name": "祈りの羽根"
 			},
 			"3": {
-				"description": "味方1人を指定する。次のラウンド終了時まで、その味方の被ダメージを-300し、スタンを無効にする。",
+				"description": "味方1人を指定する。次のラウンド終了時まで、その味方の受けるダメージを-300し、スタンを無効にする。",
 				"effect": "fuka_inori_no_hane",
 				"name": "祈りの羽根"
 			},
 			"4": {
-				"description": "味方1人のHPを300回復し、次のラウンド終了時までその味方の被ダメージを-100する。",
+				"description": "味方1人のHPを300回復し、次のラウンド終了時までその味方の受けるダメージを-100する。",
 				"effect": "fuka_orange_sky",
 				"name": "オレンジの空の下"
 			},
 			"5": {
-				"description": "味方1人のHPを300回復し、次のラウンド終了時までその味方の被ダメージを-100する。",
+				"description": "味方1人のHPを300回復し、次のラウンド終了時までその味方の受けるダメージを-100する。",
 				"effect": "fuka_orange_sky",
 				"name": "オレンジの空の下"
 			},
@@ -445,12 +665,115 @@
 		"hp": 1800,
 		"name": "豊川風香",
 		"skill": {
-			"description": "自身以外の味方アイドル全員は各アイドル一回ずつ、リタイアするダメージを相手から受けた時、HP100で耐えた後にHP500回復する。この効果が発動すると自身はスタンされる。この効果は無条件ダメージに対しては発動しない。",
+			"description": "自身以外の味方アイドル全員は各アイドル1回ずつ、リタイアするダメージを相手から受けた時、HP100で耐えた後にHP500回復する。この効果が発動すると自身はスタンされる。この効果は無条件ダメージに対しては発動しない。",
 			"name": "セクシーより正統派"
 		},
 		"type": "Angel"
 	},
+	"haruka": {
+		"affiliation": "AS",
+		"attribute": "Vo",
+		"card_image_path": "res://assets/cards/characters/天海春香.png",
+		"dex": 6,
+		"dice_actions": {
+			"1": {
+				"damage": 500,
+				"description": "相手1人に500ダメージを与える。",
+				"name": "I Want",
+				"target": "any"
+			},
+			"2": {
+				"damage": 500,
+				"description": "相手1人に500ダメージを与える。",
+				"name": "I Want",
+				"target": "any"
+			},
+			"3": {
+				"description": "自身以外のアイドル全員は、場にいるASアイドルの数×100だけ与えるダメージが増え、受けるダメージが減る。この効果は次の自身のターン開始時まで続く。",
+				"effect": "haruka_start",
+				"name": "START!!"
+			},
+			"4": {
+				"description": "自身以外のアイドル全員は、場にいるASアイドルの数×100だけ与えるダメージが増え、受けるダメージが減る。この効果は次の自身のターン開始時まで続く。",
+				"effect": "haruka_start",
+				"name": "START!!"
+			},
+			"5": {
+				"damage": 200,
+				"description": "正面の相手に200ダメージを与え、山札からアイテムカードを1枚引く。",
+				"effect": "haruka_otome",
+				"name": "乙女よ大志を抱け",
+				"target": "front"
+			},
+			"6": {
+				"description": "味方全体に200のバリアを張る。",
+				"effect": "haruka_kirameki",
+				"name": "キラメキ進行形"
+			}
+		},
+		"hp": 1300,
+		"name": "天海 春香",
+		"shop_price": 800,
+		"skill": {
+			"description": "自身以外の味方は第3・第6ラウンドに2回行動する。",
+			"name": "アイマスですよ～！"
+		},
+		"type": "Princess"
+	},
+	"hibiki": {
+		"affiliation": "AS",
+		"attribute": "Da",
+		"card_image_path": "res://assets/cards/characters/我那覇響.png",
+		"dex": 9,
+		"dice_actions": {
+			"1": {
+				"damage": 600,
+				"description": "正面の相手に600ダメージを与える。このラウンド中、自身のスキルが発動するたび、味方全員の受けるダメージを100軽減する。",
+				"effect": "hibiki_next_life",
+				"name": "Next Life",
+				"target": "front"
+			},
+			"2": {
+				"damage": 400,
+				"description": "相手1人に400ダメージを与える。この技を使った後、自身のスキルが発動するたび、自身のHPを300回復する。",
+				"effect": "hibiki_rebellion",
+				"name": "Rebellion",
+				"target": "any"
+			},
+			"3": {
+				"damage": 400,
+				"description": "相手1人に400ダメージを与える。この技を使った後、自身のスキルが発動するたび、自身のHPを300回復する。",
+				"effect": "hibiki_rebellion",
+				"name": "Rebellion",
+				"target": "any"
+			},
+			"4": {
+				"description": "次の自身のターン開始時まで、スキルのダメージを300にする。",
+				"effect": "hibiki_trial_dance",
+				"name": "TRIAL DANCE"
+			},
+			"5": {
+				"description": "次の自身のターン開始時まで、スキルのダメージを300にする。",
+				"effect": "hibiki_trial_dance",
+				"name": "TRIAL DANCE"
+			},
+			"6": {
+				"description": "味方全体のHPを300回復する。",
+				"effect": "hibiki_pon_de_beach",
+				"name": "Pon De Beach"
+			}
+		},
+		"hp": 1100,
+		"name": "我那覇 響",
+		"shop_price": 1200,
+		"skill": {
+			"description": "味方が相手の弱点を突いた時、または相手がアイテムを使った時、ランダムな相手1人に無条件100ダメージを与える。",
+			"name": "ペット群突撃"
+		},
+		"type": "Princess"
+	},
 	"hinata": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Vo",
 		"card_image_path": "res://assets/cards/characters/木下ひなた.png",
 		"dex": 2,
@@ -461,22 +784,22 @@
 				"name": "りんごのマーチ"
 			},
 			"2": {
-				"description": "画面左隣の味方の与ダメージを次のひなたのターン開始まで+400し、そのアイドルのHPを300回復する。",
+				"description": "画面左隣の味方が与えるダメージを次のひなたのターン開始まで+400し、そのアイドルのHPを300回復する。",
 				"effect": "hinata_anone",
 				"name": "あのね、聞いてほしいことがあるんだ"
 			},
 			"3": {
-				"description": "画面左隣の味方の与ダメージを次のひなたのターン開始まで+400し、そのアイドルのHPを300回復する。",
+				"description": "画面左隣の味方が与えるダメージを次のひなたのターン開始まで+400し、そのアイドルのHPを300回復する。",
 				"effect": "hinata_anone",
 				"name": "あのね、聞いてほしいことがあるんだ"
 			},
 			"4": {
-				"description": "望むなら、次に行動する味方アイドルの与ダメージを-200し、そのターンに2回連続で行動させる。",
+				"description": "望むなら、次に行動する味方アイドルの与えるダメージを-200し、そのターンに2回連続で行動させる。",
 				"effect": "hinata_snow_letter",
 				"name": "スノウレター"
 			},
 			"5": {
-				"description": "望むなら、次に行動する味方アイドルの与ダメージを-200し、そのターンに2回連続で行動させる。",
+				"description": "望むなら、次に行動する味方アイドルの与えるダメージを-200し、そのターンに2回連続で行動させる。",
 				"effect": "hinata_snow_letter",
 				"name": "スノウレター"
 			},
@@ -496,20 +819,21 @@
 		"type": "Angel"
 	},
 	"iku": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Vi",
 		"card_image_path": "res://assets/cards/characters/中谷育.png",
 		"dex": 4,
 		"dice_actions": {
 			"1": {
 				"damage": 300,
-				"description": "相手全体に無条件300ダメージを与え、次のラウンド中、味方全体の与ダメージを+200する。",
+				"description": "相手全体に無条件300ダメージを与え、次のラウンド中、味方全員が与えるダメージを+200する。",
 				"effect": "iku_animal_station",
 				"name": "アニマル☆ステイション",
 				"target": "all"
 			},
 			"2": {
 				"damage": 300,
-				"description": "相手全体に無条件300ダメージを与え、次のラウンド中、味方全体の与ダメージを+200する。",
+				"description": "相手全体に無条件300ダメージを与え、次のラウンド中、味方全員が与えるダメージを+200する。",
 				"effect": "iku_animal_station",
 				"name": "アニマル☆ステイション",
 				"target": "all"
@@ -547,7 +871,65 @@
 		},
 		"type": "Princess"
 	},
+	"iori": {
+		"affiliation": "AS",
+		"attribute": "Vo",
+		"card_image_path": "res://assets/cards/characters/水瀬 伊織.png",
+		"dex": 2,
+		"dice_actions": {
+			"1": {
+				"damage": 300,
+				"description": "相手1人に300ダメージを与え、プレッシャー状態にする。対象がすでにプレッシャー状態なら、ダメージが300増える。",
+				"effect": "iori_sonar",
+				"name": "ソナー",
+				"target": "any"
+			},
+			"2": {
+				"damage": 300,
+				"description": "相手1人に300ダメージを与え、自身にアピールポイントを1点付与する。",
+				"effect": "iori_diamond",
+				"name": "DIAMOND",
+				"target": "any"
+			},
+			"3": {
+				"damage": 300,
+				"description": "相手1人に300ダメージを与え、自身にアピールポイントを1点付与する。",
+				"effect": "iori_diamond",
+				"name": "DIAMOND",
+				"target": "any"
+			},
+			"4": {
+				"damage": 300,
+				"description": "目の前の相手に300ダメージを与える。自身がプレッシャー状態なら、200のバリアを張る。",
+				"effect": "iori_pink_rose_applause",
+				"name": "ピンクローズアプローズ",
+				"target": "front"
+			},
+			"5": {
+				"damage": 300,
+				"description": "目の前の相手に300ダメージを与える。自身がプレッシャー状態なら、200のバリアを張る。",
+				"effect": "iori_pink_rose_applause",
+				"name": "ピンクローズアプローズ",
+				"target": "front"
+			},
+			"6": {
+				"description": "プレッシャー状態の相手1人をスタンさせる。",
+				"effect": "iori_private_roadshow",
+				"name": "プライヴェイト・ロードショウ",
+				"target": "pressured_opponent"
+			}
+		},
+		"hp": 1300,
+		"name": "水瀬 伊織",
+		"shop_price": 1200,
+		"skill": {
+			"description": "試合開始時とラウンド終了時、自身にアピールポイントを1点付与する。自身のターン終了時、望むならAPを4点消費し、相手1人をプレッシャー状態にして自身に300のバリアを張る。",
+			"name": "ウサギのシャルル"
+		},
+		"type": "Fairy"
+	},
 	"julia": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Vo",
 		"card_image_path": "res://assets/cards/characters/ジュリア.png",
 		"dex": 7,
@@ -604,6 +986,7 @@
 		"type": "Fairy"
 	},
 	"kana": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Vo",
 		"card_image_path": "res://assets/cards/characters/矢吹可奈.png",
 		"dex": 7,
@@ -654,6 +1037,7 @@
 		"type": "Princess"
 	},
 	"kaori": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Vo",
 		"card_image_path": "res://assets/cards/characters/桜守歌織.png",
 		"dex": 2,
@@ -681,14 +1065,14 @@
 			},
 			"4": {
 				"damage": 200,
-				"description": "相手1人に200ダメージを与える。",
+				"description": "相手1人に200ダメージを与え、アイテムカードを1枚引く。その後サイコロを振り、出目が1・2ならスキルの使用権を回復する。",
 				"effect": "kaori_music_journey",
 				"name": "MUSIC JOURNEY",
 				"target": "any"
 			},
 			"5": {
 				"damage": 200,
-				"description": "相手1人に200ダメージを与える。",
+				"description": "相手1人に200ダメージを与え、アイテムカードを1枚引く。その後サイコロを振り、出目が1・2ならスキルの使用権を回復する。",
 				"effect": "kaori_music_journey",
 				"name": "MUSIC JOURNEY",
 				"target": "any"
@@ -711,6 +1095,7 @@
 		"type": "Angel"
 	},
 	"karen": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Vi",
 		"card_image_path": "res://assets/cards/characters/篠宮可憐.png",
 		"dex": 4,
@@ -761,6 +1146,7 @@
 		"type": "Angel"
 	},
 	"konomi": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Da",
 		"card_image_path": "res://assets/cards/characters/馬場このみ.png",
 		"dex": 2,
@@ -776,7 +1162,7 @@
 				"name": "dear..."
 			},
 			"3": {
-				"description": "両隣の味方のHPを300回復＆1APを付与し、その2人の与ダメージを次のこのみのターン終了まで+300する。",
+				"description": "両隣の味方のHPを300回復し、APを1点付与し、その2人の与えるダメージを次のこのみのターン終了まで+300する。",
 				"effect": "konomi_water_candy",
 				"name": "水中キャンディ"
 			},
@@ -807,31 +1193,32 @@
 		"type": "Angel"
 	},
 	"kotoha": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Vo",
 		"card_image_path": "res://assets/cards/characters/田中琴葉.png",
 		"dex": 7,
 		"dice_actions": {
 			"1": {
-				"description": "山札からアイテムカードを1枚引き、次の琴葉のターン開始時まで両隣の味方アイドルの与ダメージを+300する。",
+				"description": "山札からアイテムカードを1枚引き、次の琴葉のターン開始時まで両隣の味方アイドルの与えるダメージを+300する。",
 				"effect": "kotoha_silhouette",
 				"name": "シルエット"
 			},
 			"2": {
 				"damage": 200,
-				"description": "相手1人に200ダメージを与え、次の琴葉のターン開始時まで右隣の味方アイドルの与ダメージを+200する。",
+				"description": "相手1人に200ダメージを与え、次の琴葉のターン開始時まで右隣の味方アイドルの与えるダメージを+200する。",
 				"effect": "kotoha_sing_a_wing_song",
 				"name": "Sing a Wing Song",
 				"target": "any"
 			},
 			"3": {
 				"damage": 200,
-				"description": "相手1人に200ダメージを与え、次の琴葉のターン開始時まで右隣の味方アイドルの与ダメージを+200する。",
+				"description": "相手1人に200ダメージを与え、次の琴葉のターン開始時まで右隣の味方アイドルの与えるダメージを+200する。",
 				"effect": "kotoha_sing_a_wing_song",
 				"name": "Sing a Wing Song",
 				"target": "any"
 			},
 			"4": {
-				"description": "望むなら自身がリタイアし、生存している味方アイドル1人のHPを全回復し、試合終了までそのアイドルの与ダメージを永続的に+200する。",
+				"description": "望むなら自身がリタイアし、生存している味方アイドル1人のHPを全回復し、試合終了までそのアイドルの与えるダメージを永続的に+200する。",
 				"effect": "kotoha_hontou_no_watashi",
 				"name": "ホントウノワタシ"
 			},
@@ -856,7 +1243,116 @@
 		},
 		"type": "Princess"
 	},
+	"makoto": {
+		"affiliation": "AS",
+		"attribute": "Da",
+		"card_image_path": "res://assets/cards/characters/菊地 真.png",
+		"dex": 9,
+		"dice_actions": {
+			"1": {
+				"damage": 600,
+				"description": "相手1人に600ダメージを与える。ダメージを与えた場合、その相手の両隣に無条件200ダメージを与える。",
+				"effect": "makoto_bicycle",
+				"name": "自転車",
+				"target": "any"
+			},
+			"2": {
+				"bonus_if_target_front": 200,
+				"damage": 200,
+				"description": "アイドル1人に200ダメージを与える。対象が目の前なら、さらに200ダメージを与える。",
+				"effect": "makoto_sepia_colorful",
+				"name": "セピアカラフル",
+				"target": "any"
+			},
+			"3": {
+				"bonus_if_target_front": 200,
+				"damage": 200,
+				"description": "アイドル1人に200ダメージを与える。対象が目の前なら、さらに200ダメージを与える。",
+				"effect": "makoto_sepia_colorful",
+				"name": "セピアカラフル",
+				"target": "any"
+			},
+			"4": {
+				"description": "このターン、さらに2回行動する。",
+				"effect": "makoto_fly_to_everywhere",
+				"name": "FLY TO EVERYWHERE"
+			},
+			"5": {
+				"description": "自身に200のバリアを張る。次のターン開始時まで、スキル「王子の追撃」のダメージを400にする。",
+				"effect": "makoto_world_wide_dance",
+				"name": "WORLD WIDE DANCE!!!"
+			},
+			"6": {
+				"description": "自身に200のバリアを張る。次のターン開始時まで、スキル「王子の追撃」のダメージを400にする。",
+				"effect": "makoto_world_wide_dance",
+				"name": "WORLD WIDE DANCE!!!"
+			}
+		},
+		"hp": 1200,
+		"name": "菊地 真",
+		"shop_price": 1200,
+		"skill": {
+			"description": "ラウンドに1回、自分以外の味方の攻撃が相手に無効化された時、または相手がダメージを受けて残りHPが200以下になった時、その相手に無条件200ダメージを与える。",
+			"name": "王子の追撃"
+		},
+		"type": "Princess"
+	},
+	"mami": {
+		"affiliation": "AS",
+		"attribute": "Vi",
+		"card_image_path": "res://assets/cards/characters/双海真美.png",
+		"dex": 10,
+		"dice_actions": {
+			"1": {
+				"damage": 500,
+				"description": "相手1人に500ダメージを与える。",
+				"effect": "futami_tostostaa",
+				"name": "スタ→トスタ→",
+				"target": "any"
+			},
+			"2": {
+				"description": "相手1人に、この試合中に『スタ→トスタ→』を使った回数×100ダメージを与える。使用回数が0回なら、代わりに『スタ→トスタ→』を使う。",
+				"effect": "mami_singing_monkey",
+				"name": "WOW! I NEED!! ～シンギングモンキー 歌唱拳～",
+				"target": "any"
+			},
+			"3": {
+				"description": "相手1人に、この試合中に『スタ→トスタ→』を使った回数×100ダメージを与える。使用回数が0回なら、代わりに『スタ→トスタ→』を使う。",
+				"effect": "mami_singing_monkey",
+				"name": "WOW! I NEED!! ～シンギングモンキー 歌唱拳～",
+				"target": "any"
+			},
+			"4": {
+				"description": "次の自身のターン中、与えるダメージが『スタ→トスタ→』を使った回数×100増える。",
+				"effect": "mami_unique_star_player",
+				"name": "ユニーク・スター・プレイヤー！"
+			},
+			"5": {
+				"description": "次の自身のターン中、与えるダメージが『スタ→トスタ→』を使った回数×100増える。",
+				"effect": "mami_unique_star_player",
+				"name": "ユニーク・スター・プレイヤー！"
+			},
+			"6": {
+				"damage": 300,
+				"description": "相手1人に300ダメージを与える。次の自身の行動では『スタ→トスタ→』を使う。",
+				"effect": "futami_force_tostostaa",
+				"name": "ユニーク・スターズ・オン・ステージ",
+				"target": "any"
+			}
+		},
+		"futami_tostostaa_count": 0,
+		"hp": 700,
+		"name": "双海 真美",
+		"shop_price": 800,
+		"skill": {
+			"active_skill": "futami_mami_force_tostostaa",
+			"description": "試合開始時、自身に600のバリアを張る。行動前、固定200ダメージを受けると、次に使う技を『スタ→トスタ→』にする。",
+			"name": "双子 M"
+		},
+		"type": "Angel"
+	},
 	"matsuri": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Vi",
 		"card_image_path": "res://assets/cards/characters/徳川まつり.png",
 		"dex": 3,
@@ -911,6 +1407,7 @@
 		"type": "Princess"
 	},
 	"megumi": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Vi",
 		"card_image_path": "res://assets/cards/characters/所恵美.png",
 		"dex": 7,
@@ -937,12 +1434,12 @@
 				"target": "any"
 			},
 			"4": {
-				"description": "自身に200のバリアを張り、次のラウンド中、味方Fairy属性アイドル全員の与ダメージを+200する。",
+				"description": "自身に200のバリアを張り、次のラウンド中、味方Fairy属性アイドル全員が与えるダメージを+200する。",
 				"effect": "megumi_hearty",
 				"name": "Hearty!"
 			},
 			"5": {
-				"description": "自身に200のバリアを張り、次のラウンド中、味方Fairy属性アイドル全員の与ダメージを+200する。",
+				"description": "自身に200のバリアを張り、次のラウンド中、味方Fairy属性アイドル全員が与えるダメージを+200する。",
 				"effect": "megumi_hearty",
 				"name": "Hearty!"
 			},
@@ -957,12 +1454,70 @@
 		"hp": 1200,
 		"name": "所恵美",
 		"skill": {
-			"description": "試合中一度だけ、好きなこのキャラの技決定ロールに発動できる。「フローズンワード」を打つ。",
+			"description": "試合中1回だけ、好きなこのアイドルの技決定ロールに発動できる。「フローズンワード」を打つ。",
 			"name": "やっほ！にゃはは！"
 		},
 		"type": "Fairy"
 	},
+	"miki": {
+		"affiliation": "AS",
+		"attribute": "Vi",
+		"card_image_path": "res://assets/cards/characters/星井美希.png",
+		"dex": 8,
+		"dice_actions": {
+			"1": {
+				"damage": 1000,
+				"description": "相手1人に1000ダメージを与える。",
+				"effect": "miki_marionette_heart",
+				"name": "マリオネットの心",
+				"target": "any"
+			},
+			"2": {
+				"damage": 1000,
+				"description": "相手1人に1000ダメージを与える。",
+				"effect": "miki_marionette_heart",
+				"name": "マリオネットの心",
+				"target": "any"
+			},
+			"3": {
+				"damage": 800,
+				"description": "目の前の相手に800ダメージを与える。",
+				"effect": "miki_day_of_the_future",
+				"name": "Day of the future",
+				"target": "front"
+			},
+			"4": {
+				"damage": 800,
+				"description": "目の前の相手に800ダメージを与える。",
+				"effect": "miki_day_of_the_future",
+				"name": "Day of the future",
+				"target": "front"
+			},
+			"5": {
+				"description": "自身のHPを300回復し、目の前の相手をスタンさせる。",
+				"effect": "miki_fake_self_true_self",
+				"name": "FAKE SELF TRUE SELF"
+			},
+			"6": {
+				"damage": 600,
+				"description": "相手全員に600ダメージを与える。",
+				"effect": "miki_furufuru_future",
+				"name": "ふるふるフューチャー☆",
+				"target": "all_opponents"
+			}
+		},
+		"hp": 1400,
+		"name": "星井 美希",
+		"shop_price": 800,
+		"skill": {
+			"description": "第1ラウンド中は行動できない。第1～第4ラウンド中、与えるダメージが500減り、受けるダメージが100減る。このスキルは消すことができない。",
+			"name": "まだねむいの～"
+		},
+		"skill_cannot_be_disabled": true,
+		"type": "Angel"
+	},
 	"minako": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Da",
 		"card_image_path": "res://assets/cards/characters/佐竹美奈子.png",
 		"dex": 5,
@@ -1016,6 +1571,7 @@
 		"type": "Princess"
 	},
 	"mirai": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Vo",
 		"card_image_path": "res://assets/cards/characters/春日未来.png",
 		"dex": 8,
@@ -1062,12 +1618,13 @@
 		"name": "春日未来",
 		"rerolls_used": 0,
 		"skill": {
-			"description": "春日未来が味方にいる間、味方キャラクター全員は対戦中2回まで技を決めるサイコロを振り直せます。",
+			"description": "春日未来が味方にいる間、味方アイドル全員は対戦中2回まで技を決めるサイコロを振り直せます。",
 			"name": "でへへ～"
 		},
 		"type": "Princess"
 	},
 	"miya": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Vi",
 		"card_image_path": "res://assets/cards/characters/宮尾美也.png",
 		"dex": 1,
@@ -1119,33 +1676,34 @@
 		"type": "Angel"
 	},
 	"mizuki": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Da",
 		"card_image_path": "res://assets/cards/characters/真壁瑞希.png",
 		"dex": 5,
 		"dice_actions": {
 			"1": {
-				"description": "相手1人に【出目×100+200】ダメージを与える（捨て札合計10枚以上で+300）。山札から1枚引き手札を1枚捨てる。",
+				"description": "相手1人に【出目×100+200】ダメージを与える（捨て札合計6枚以上で+300）。山札から1枚引き手札を1枚捨てる。",
 				"effect": "mizuki_silent_joker",
 				"name": "Silent Joker",
 				"target": "any"
 			},
 			"2": {
 				"damage": 200,
-				"description": "相手1人に200ダメージを与える。お互いの捨て札合計が10枚以上ならダメージが+300される。",
+				"description": "相手1人に200ダメージを与える。お互いの捨て札合計が6枚以上ならダメージが+300される。",
 				"effect": "mizuki_poker_poker",
 				"name": "POKER POKER",
 				"target": "any"
 			},
 			"3": {
 				"damage": 200,
-				"description": "相手1人に200ダメージを与える。お互いの捨て札合計が10枚以上ならダメージが+300される。",
+				"description": "相手1人に200ダメージを与える。お互いの捨て札合計が6枚以上ならダメージが+300される。",
 				"effect": "mizuki_poker_poker",
 				"name": "POKER POKER",
 				"target": "any"
 			},
 			"4": {
 				"damage": 200,
-				"description": "相手1人に200ダメージを与える。お互いの捨て札合計が10枚以上ならダメージが+300される。",
+				"description": "相手1人に200ダメージを与える。お互いの捨て札合計が6枚以上ならダメージが+300される。",
 				"effect": "mizuki_poker_poker",
 				"name": "POKER POKER",
 				"target": "any"
@@ -1171,6 +1729,7 @@
 		"type": "Fairy"
 	},
 	"momoko": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Vi",
 		"card_image_path": "res://assets/cards/characters/周防桃子.png",
 		"dex": 3,
@@ -1197,20 +1756,19 @@
 				"target": "front"
 			},
 			"4": {
-				"description": "次の自身の行動開始時まで、アピールポイントがある味方全員の被ダメージを【各自のAP×100】軽減する。",
+				"description": "次の自身の行動開始時まで、アピールポイントがある味方全員の受けるダメージを【各自のAP×100】軽減する。",
 				"effect": "momoko_appeal_guard",
 				"name": "リーチ・アップ・ステップ！"
 			},
 			"5": {
-				"description": "次の自身の行動開始時まで、アピールポイントがある味方全員の被ダメージを【各自のAP×100】軽減する。",
+				"description": "次の自身の行動開始時まで、アピールポイントがある味方全員の受けるダメージを【各自のAP×100】軽減する。",
 				"effect": "momoko_appeal_guard",
 				"name": "リーチ・アップ・ステップ！"
 			},
 			"6": {
-				"description": "全アイドルから1人を選びアピールポイントを1点付与する（味方で付与前からAP2点以上ならその味方をHP全回復）。",
-				"effect": "momoko_decoration",
-				"name": "デコレーション・ドリ～ミンッ♪",
-				"target": "any_idol"
+				"description": "味方全体にアピールポイントを1点付与する。",
+				"effect": "momoko_grant_appeal_all",
+				"name": "デコレーション・ドリ～ミンッ♪"
 			}
 		},
 		"hp": 1000,
@@ -1222,24 +1780,25 @@
 		"type": "Fairy"
 	},
 	"nao": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Da",
 		"card_image_path": "res://assets/cards/characters/横山奈緒.png",
 		"dex": 6,
 		"dice_actions": {
 			"1": {
 				"damage": 300,
-				"description": "相手1人に300ダメージを与える。攻撃を受けた相手はラウンド終了時まで被ダメージが+500される。",
+				"description": "相手1人に300ダメージを与える。攻撃を受けた相手はラウンド終了時まで受けるダメージが+500される。",
 				"effect": "nao_home_is_a_coming",
 				"name": "Home is a coming now!",
 				"target": "any"
 			},
 			"2": {
-				"description": "相手アイドル全員の被ダメージを、ラウンド終了時まで+200する。",
+				"description": "相手アイドル全員のバリアを解除し、ラウンド終了時まで受けるダメージを+200する。",
 				"effect": "nao_super_lover",
 				"name": "Super Lover"
 			},
 			"3": {
-				"description": "相手アイドル全員の被ダメージを、ラウンド終了時まで+200する。",
+				"description": "相手アイドル全員のバリアを解除し、ラウンド終了時まで受けるダメージを+200する。",
 				"effect": "nao_super_lover",
 				"name": "Super Lover"
 			},
@@ -1272,6 +1831,7 @@
 		"type": "Princess"
 	},
 	"noriko": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Da",
 		"card_image_path": "res://assets/cards/characters/福田のり子.png",
 		"dex": 4,
@@ -1319,47 +1879,48 @@
 		"hp": 1400,
 		"name": "福田のり子",
 		"skill": {
-			"description": "最大HP1400以上のアイドルに対して与えるダメージが+400される。最大HP1600以上のアイドルにダメージを与えた時、スタンさせる。",
+			"description": "最大HP1300以上のアイドルに対して与えるダメージが+400される。最大HP1500以上のアイドルにダメージを与えた時、スタンさせる。",
 			"name": "クラウザー号"
 		},
 		"type": "Princess"
 	},
 	"ogami": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Da",
 		"card_image_path": "res://assets/cards/characters/大神環.png",
 		"dex": 10,
 		"dice_actions": {
 			"1": {
 				"damage": 800,
-				"description": "相手1人に無条件800ダメージを与える。",
+				"description": "相手1人のバリアを解除し、無条件800ダメージを与える。",
 				"effect": "ogami_play_go",
 				"name": "Play GO! Round",
 				"target": "any"
 			},
 			"2": {
 				"damage": 500,
-				"description": "正面の相手に無条件500ダメージを与える。",
+				"description": "正面の相手のバリアを解除し、無条件500ダメージを与える。",
 				"effect": "ogami_hai_ho",
 				"name": "たんけんぼうけん☆ハイホー隊",
 				"target": "front"
 			},
 			"3": {
 				"damage": 500,
-				"description": "正面の相手に無条件500ダメージを与える。",
+				"description": "正面の相手のバリアを解除し、無条件500ダメージを与える。",
 				"effect": "ogami_hai_ho",
 				"name": "たんけんぼうけん☆ハイホー隊",
 				"target": "front"
 			},
 			"4": {
-				"damage": 200,
-				"description": "相手1人に無条件200ダメージを与え、次の自身のターンに技決定サイコロを1回振り直せる。",
+				"damage": 300,
+				"description": "相手1人に無条件300ダメージを与え、次の自身のターンに技決定サイコロを1回振り直せる。",
 				"effect": "ogami_hop_step",
 				"name": "ホップ♪ステップ♪レインボウ♪",
 				"target": "any"
 			},
 			"5": {
-				"damage": 200,
-				"description": "相手1人に無条件200ダメージを与え、次の自身のターンに技決定サイコロを1回振り直せる。",
+				"damage": 300,
+				"description": "相手1人に無条件300ダメージを与え、次の自身のターンに技決定サイコロを1回振り直せる。",
 				"effect": "ogami_hop_step",
 				"name": "ホップ♪ステップ♪レインボウ♪",
 				"target": "any"
@@ -1373,12 +1934,13 @@
 		"hp": 900,
 		"name": "大神環",
 		"skill": {
-			"description": "自身がリタイアするダメージを受けそうな時、ダイスを振って『1』or『2』がでればダメージをなかったことにできる。",
+			"description": "自身がリタイアするダメージを受けそうな時、サイコロを振って『1』または『2』が出ればダメージをなかったことにできる。",
 			"name": "おやぶんとこぶん"
 		},
 		"type": "Angel"
 	},
 	"reika": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Da",
 		"card_image_path": "res://assets/cards/characters/北上麗花.png",
 		"dex": 8,
@@ -1423,6 +1985,7 @@
 		"type": "Angel"
 	},
 	"rio": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Da",
 		"card_image_path": "res://assets/cards/characters/百瀬莉緒.png",
 		"dex": 6,
@@ -1466,7 +2029,62 @@
 		},
 		"type": "Fairy"
 	},
+	"ritsuko": {
+		"affiliation": "AS",
+		"attribute": "Vi",
+		"card_image_path": "res://assets/cards/characters/秋月 律子.png",
+		"dex": 5,
+		"dice_actions": {
+			"1": {
+				"damage": 600,
+				"description": "正面の相手に600ダメージを与える。次のラウンド終了時まで、相手側でアイテム使用後や効果によって手札が捨て札に置かれるたび、その側のランダムなアイドル1人に無条件300ダメージを与える。",
+				"effect": "ritsuko_ippai_ippai",
+				"name": "いっぱいいっぱい",
+				"target": "front"
+			},
+			"2": {
+				"damage": 300,
+				"description": "正面の相手に300ダメージを与え、相手の捨て札の枚数×100－200（0未満の場合は0）のバリアを自身に張る。",
+				"effect": "ritsuko_discord_area",
+				"name": "Discord Area",
+				"target": "front"
+			},
+			"3": {
+				"damage": 300,
+				"description": "正面の相手に300ダメージを与え、相手の捨て札の枚数×100－200（0未満の場合は0）のバリアを自身に張る。",
+				"effect": "ritsuko_discord_area",
+				"name": "Discord Area",
+				"target": "front"
+			},
+			"4": {
+				"description": "相手の手札をランダムに1枚捨てさせ、相手のこのラウンド中のアイテム使用権をなくす。",
+				"effect": "ritsuko_greedy_girl",
+				"name": "GREEDY GIRL"
+			},
+			"5": {
+				"description": "相手の手札をランダムに1枚捨てさせ、相手のこのラウンド中のアイテム使用権をなくす。",
+				"effect": "ritsuko_greedy_girl",
+				"name": "GREEDY GIRL"
+			},
+			"6": {
+				"damage": 200,
+				"description": "相手側のランダムなアイドル1人に200ダメージを与えた後、お互いに手札を1枚選んで捨てる。",
+				"effect": "ritsuko_liars_good_bye",
+				"name": "Liar's good bye",
+				"target": "random_opponent"
+			}
+		},
+		"hp": 1400,
+		"name": "秋月 律子",
+		"shop_price": 1200,
+		"skill": {
+			"description": "両陣営の全体攻撃を失敗させる。技に失敗した時、そのアイドルは手札を1枚選んで捨てる。手札がない場合は捨てない。",
+			"name": "スパルタプロデュース"
+		},
+		"type": "Fairy"
+	},
 	"roco": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Vi",
 		"card_image_path": "res://assets/cards/characters/ロコ.png",
 		"dex": 3,
@@ -1536,7 +2154,7 @@
 				"roll_text": "4・5・6"
 			},
 			{
-				"description": "2つの効果から選ぶ：『相手のすべてのViアイドルは次のラウンド終了時まで与ダメージ-300』または『味方のすべてのViアイドルは次のラウンド終了時まで与ダメージ+200』",
+				"description": "2つの効果から選ぶ：『相手のすべてのViアイドルは次のラウンド終了時まで与えるダメージ-300』または『味方のすべてのViアイドルは次のラウンド終了時まで与えるダメージ+200』",
 				"name": "わたしルネサンス",
 				"roll_text": "3・4・5"
 			}
@@ -1544,12 +2162,13 @@
 		"hp": 1400,
 		"name": "ロコ",
 		"skill": {
-			"description": "特定の出目で複数の技から選択可能。ロコが試合に参加している限り永続（リタイア後も持続）：全Voアイドルは与ダメ+200・被ダメ+200、全Daアイドルは与ダメ-200・被ダメ-200、全Viアイドルは全攻撃が無条件ダメージ化＆技発動時固定200反動ダメージ。",
+			"description": "特定の出目で複数の技から選択可能。ロコが試合に参加している限り永続（リタイア後も持続）：全Voアイドルは与えるダメージ+200・受けるダメージ+200、全Daアイドルは与えるダメージ-200・受けるダメージ-200、全Viアイドルは全攻撃が無条件ダメージ化＆技発動時固定200反動ダメージ。",
 			"name": "ロコアートの世界です！"
 		},
 		"type": "Fairy"
 	},
 	"sayoko": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Vo",
 		"card_image_path": "res://assets/cards/characters/高山紗代子.png",
 		"dex": 9,
@@ -1598,12 +2217,13 @@
 		"hp": 1100,
 		"name": "高山紗代子",
 		"skill": {
-			"description": "最初のラウンド中三回行動する。このキャラはスタンしない。",
+			"description": "最初のラウンド中三回行動する。このアイドルはスタンしない。",
 			"name": "何度でもがむしゃらに"
 		},
 		"type": "Princess"
 	},
 	"serika": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Vo",
 		"card_image_path": "res://assets/cards/characters/箱崎星梨花.png",
 		"dex": 5,
@@ -1653,6 +2273,7 @@
 		"type": "Angel"
 	},
 	"shiho": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Vi",
 		"card_image_path": "res://assets/cards/characters/北沢志保.png",
 		"dex": 6,
@@ -1687,7 +2308,7 @@
 			},
 			"5": {
 				"damage": 500,
-				"description": "自分の捨て札が6枚以上の場合のみ発動可能。相手全体に500ダメージを与える（5枚以下なら失敗）。",
+				"description": "自分の捨て札が4枚以上の場合のみ発動可能。相手全体に500ダメージを与える（3枚以下なら失敗）。",
 				"effect": "shiho_purple_sky",
 				"name": "Purple Sky",
 				"target": "all_opponents"
@@ -1706,18 +2327,74 @@
 		},
 		"type": "Fairy"
 	},
+	"shiki": {
+		"affiliation": "シンデレラガールズ",
+		"attribute": "Vi",
+		"card_image_path": "res://assets/cards/characters/一ノ瀬 志希.png",
+		"dex": 3,
+		"dice_actions": {
+			"1": {
+				"damage": 200,
+				"description": "相手全体に200ダメージを与える。望むなら、自分または相手の公開された手札を好きな枚数裏返す。裏返した枚数1枚につき、この技のダメージが200増える。",
+				"effect": "shiki_himitsu_toilette",
+				"name": "秘密のトワレ",
+				"target": "all_opponents"
+			},
+			"2": {
+				"damage": 200,
+				"description": "相手全体に200ダメージを与える。望むなら、自分または相手の公開された手札を好きな枚数裏返す。裏返した枚数1枚につき、この技のダメージが200増える。",
+				"effect": "shiki_himitsu_toilette",
+				"name": "秘密のトワレ",
+				"target": "all_opponents"
+			},
+			"3": {
+				"damage": 300,
+				"description": "相手1人に300ダメージを与える。望むなら、自分の手札を1枚公開する。公開した場合、自身に200のバリアを張る。",
+				"effect": "shiki_proust_effect",
+				"name": "PROUST EFFECT",
+				"target": "any"
+			},
+			"4": {
+				"damage": 300,
+				"description": "相手1人に300ダメージを与える。望むなら、自分の手札を1枚公開する。公開した場合、自身に200のバリアを張る。",
+				"effect": "shiki_proust_effect",
+				"name": "PROUST EFFECT",
+				"target": "any"
+			},
+			"5": {
+				"damage": 300,
+				"description": "正面の相手に300ダメージを与える。",
+				"name": "クレイジークレイジー",
+				"target": "front"
+			},
+			"6": {
+				"description": "山札からアイテムカードを1枚引く。望むなら、引いたカードと相手の手札をそれぞれ1枚公開する。",
+				"effect": "shiki_nijiiro_letters",
+				"name": "虹色letters"
+			}
+		},
+		"hp": 1300,
+		"name": "一ノ瀬 志希",
+		"shiki_bonus_damage": 0,
+		"skill": {
+			"description": "試合開始時、お互いの手札を1枚ずつ公開する。公開された手札の枚数に応じて、志希以外のアイドルが受けるダメージが増える（1枚につき+100）。",
+			"name": "ギフテッドアイドル"
+		},
+		"type": "Princess"
+	},
 	"shizuka": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Vo",
 		"card_image_path": "res://assets/cards/characters/最上静香.png",
 		"dex": 6,
 		"dice_actions": {
 			"1": {
 				"bonus_per_hand_item": {
-					"damage": 100,
+					"damage": 200,
 					"item_id": "regen_udon"
 				},
-				"damage": 400,
-				"description": "相手1人に400ダメージを与える。手札のリジェネうどんを公開でき、公開した1枚につき与えるダメージが100増える。",
+				"damage": 500,
+				"description": "相手1人に500ダメージを与える。手札のリジェネうどんを公開でき、公開した1枚につき与えるダメージが200増える。",
 				"name": "SING MY SONG",
 				"target": "any"
 			},
@@ -1746,10 +2423,8 @@
 				"target": "front"
 			},
 			"6": {
-				"attribute": "Vo",
-				"bonus": 200,
-				"description": "次に最上静香が行動終了するまで、味方のVo属性アイドル全員の与ダメージを+200する。",
-				"effect": "grant_attribute_damage",
+				"description": "自身が試合中にリジェネうどんを使った回数×100のバリアを自身に張る。",
+				"effect": "shizuka_regen_barrier",
 				"name": "Catch my dream"
 			}
 		},
@@ -1764,6 +2439,7 @@
 		"vo_damage_bonus_armed": false
 	},
 	"subaru": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Da",
 		"card_image_path": "res://assets/cards/characters/永吉昴.png",
 		"dex": 10,
@@ -1802,7 +2478,7 @@
 				"target": "front"
 			},
 			"6": {
-				"description": "次の自身のターン中、好きなタイミングでダイスの振り直しができる。",
+				"description": "次の自身のターン中、好きなタイミングでサイコロの振り直しができる。",
 				"effect": "subaru_day_after_yesterday",
 				"name": "Day After \"Yesterday\""
 			}
@@ -1810,23 +2486,70 @@
 		"hp": 1100,
 		"name": "永吉昴",
 		"skill": {
-			"description": "技決定ロールを行う前に望むなら自身に固定100ダメージ与えてよい。与えたらダイスを振り『1』がでれば次に打つ技のダメージは倍になる。自分のアイドルが自身しかいないならこの処理のダイスの判定に『2』『3』『4』が追加される。",
+			"description": "技決定ロールを行う前に望むなら自身に固定100ダメージ与えてよい。与えたらサイコロを振り『1』が出れば次に打つ技のダメージは倍になる。自分のアイドルが自身しかいないならこの処理のサイコロの判定に『2』『3』『4』が追加される。",
 			"name": "サヨナラホームラン"
 		},
 		"type": "Fairy"
 	},
+	"takane": {
+		"affiliation": "AS",
+		"attribute": "Da",
+		"card_image_path": "res://assets/cards/characters/四条 貴音.png",
+		"dex": 3,
+		"dice_actions": {
+			"1": {
+				"description": "次のラウンド終了時まで、相手全体の与えるダメージを200減らす。次の自身のターン開始時まで、自身はヘイトを得る。",
+				"effect": "takane_flower_girl",
+				"name": "フラワーガール"
+			},
+			"2": {
+				"description": "味方全体に300のバリアを張る。",
+				"effect": "takane_addicted",
+				"name": "addicted"
+			},
+			"3": {
+				"description": "味方全体に300のバリアを張る。",
+				"effect": "takane_addicted",
+				"name": "addicted"
+			},
+			"4": {
+				"description": "プレッシャー状態の相手全員をスタンさせる。",
+				"effect": "takane_fuka",
+				"name": "風花"
+			},
+			"5": {
+				"description": "自身に200のバリアを張る。次の自身の行動で『フラワーガール』か『風花』を選んで使用できる。",
+				"effect": "takane_koibana",
+				"name": "恋花"
+			},
+			"6": {
+				"description": "自身に200のバリアを張る。次の自身の行動で『フラワーガール』か『風花』を選んで使用できる。",
+				"effect": "takane_koibana",
+				"name": "恋花"
+			}
+		},
+		"hp": 1500,
+		"name": "四条 貴音",
+		"shop_price": 1200,
+		"skill": {
+			"description": "自身のHPが減るダメージを受けた攻撃者をプレッシャー状態にする。プレッシャー状態のアイドルは、最初のプレッシャー固定100ダメージを受けた後、望むならプレッシャーを解除できる。解除した場合、そのアイドルは追加で固定400ダメージを受ける。解除後に再びプレッシャー状態になった場合、固定ダメージは100から始まる。",
+			"name": "これまた面妖な…"
+		},
+		"type": "Fairy"
+	},
 	"tomoka": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Vo",
 		"card_image_path": "res://assets/cards/characters/天空橋朋花.png",
 		"dex": 1,
 		"dice_actions": {
 			"1": {
-				"description": "次の自身のターン開始時までヘイトを得る。期間中に自身を攻撃した相手アイドルに通常300ダメージを与える。",
+				"description": "次の自身のターン開始時までヘイトを得る。期間中に自身を攻撃した相手アイドルに無条件400ダメージを与える。",
 				"effect": "tomoka_maria_trap",
 				"name": "Maria Trap"
 			},
 			"2": {
-				"description": "ランダムな相手1人をスタンさせる。",
+				"description": "ランダムな相手1人をスタンさせる。次の自身のターンに、技決定サイコロを1回振り直せる。",
 				"effect": "tomoka_torikago",
 				"name": "鳥籠スクリプチュア"
 			},
@@ -1867,6 +2590,7 @@
 		"type": "Fairy"
 	},
 	"tsubasa": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Vi",
 		"card_image_path": "res://assets/cards/characters/伊吹 翼.png",
 		"dex": 8,
@@ -1891,12 +2615,12 @@
 				"target": "front"
 			},
 			"4": {
-				"description": "次に自身が別の技を使うとき、対象を相手1人から選べるようになる。同じ技が出た場合は別の技が出るまで振り直す。",
+				"description": "自身に200のバリアを張る。次に自身が別の技を使うとき、対象を相手1人から選べるようになる。同じ技が出た場合は別の技が出るまで振り直す。",
 				"effect": "retarget_next_action",
 				"name": "泣き空、のち"
 			},
 			"5": {
-				"description": "次に自身が別の技を使うとき、対象を相手1人から選べるようになる。同じ技が出た場合は別の技が出るまで振り直す。",
+				"description": "自身に200のバリアを張る。次に自身が別の技を使うとき、対象を相手1人から選べるようになる。同じ技が出た場合は別の技が出るまで振り直す。",
 				"effect": "retarget_next_action",
 				"name": "泣き空、のち"
 			},
@@ -1920,6 +2644,7 @@
 		"type": "Angel"
 	},
 	"tsumugi": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Da",
 		"card_image_path": "res://assets/cards/characters/白石紬.png",
 		"dex": 3,
@@ -1953,7 +2678,7 @@
 				"target": "any"
 			},
 			"5": {
-				"description": "次の自身のターン、サイコロを振らずに出目1の技『瑠璃色金魚と花菖蒲』を発動する。",
+				"description": "自身に200のバリアを張る。次の自身のターン、サイコロを振らずに出目1の技『瑠璃色金魚と花菖蒲』を発動する。",
 				"effect": "tsumugi_force_goldfish_attack",
 				"name": "折紙物語"
 			},
@@ -1977,6 +2702,7 @@
 		"type": "Fairy"
 	},
 	"umi": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Da",
 		"card_image_path": "res://assets/cards/characters/高坂海美.png",
 		"dex": 10,
@@ -2003,17 +2729,17 @@
 				"target": "front"
 			},
 			"4": {
-				"description": "山札からアイテムカードを1枚引き、次の自身のターンの与ダメージを+200する。",
+				"description": "山札からアイテムカードを1枚引き、次の自身のターンの与えるダメージを+200する。",
 				"effect": "umi_build_up",
 				"name": "美!美!美!ビルドUP!"
 			},
 			"5": {
-				"description": "次の自身のターン終了時まで、味方全体の与ダメージを+200する。",
+				"description": "次の自身のターン終了時まで、味方全員が与えるダメージを+200する。",
 				"effect": "umi_kokoro_exercise",
 				"name": "ココロ☆エクササイズ"
 			},
 			"6": {
-				"description": "次の自身のターン終了時まで、味方全体の与ダメージを+200する。",
+				"description": "次の自身のターン終了時まで、味方全員が与えるダメージを+200する。",
 				"effect": "umi_kokoro_exercise",
 				"name": "ココロ☆エクササイズ"
 			}
@@ -2026,13 +2752,128 @@
 		},
 		"type": "Princess"
 	},
+	"yayoi": {
+		"affiliation": "AS",
+		"attribute": "Da",
+		"card_image_path": "res://assets/cards/characters/高槻やよい.png",
+		"dex": 7,
+		"dice_actions": {
+			"1": {
+				"damage": 200,
+				"description": "相手1人に200ダメージを与える。捨て札にあるアイテムの種類1つにつき、ダメージが100増える。",
+				"effect": "yayoi_kiramekirari",
+				"name": "キラメキラリ",
+				"target": "any"
+			},
+			"2": {
+				"damage": 200,
+				"description": "相手1人に200ダメージを与える。捨て札にあるアイテムの種類1つにつき、ダメージが100増える。",
+				"effect": "yayoi_kiramekirari",
+				"name": "キラメキラリ",
+				"target": "any"
+			},
+			"3": {
+				"damage": 300,
+				"description": "相手1人に300ダメージを与え、このラウンド中のアイテム使用権を1回増やす。",
+				"effect": "yayoi_pikari_pickup",
+				"name": "ピカリピックアップ！",
+				"target": "any"
+			},
+			"4": {
+				"damage": 300,
+				"description": "相手1人に300ダメージを与え、このラウンド中のアイテム使用権を1回増やす。",
+				"effect": "yayoi_pikari_pickup",
+				"name": "ピカリピックアップ！",
+				"target": "any"
+			},
+			"5": {
+				"description": "正面の相手に、捨て札にあるアイテムの種類1つにつき100ダメージを与える。その後、自身の与えるダメージが100減り、自身のHPを回復する。",
+				"effect": "yayoi_strawberry_cupid",
+				"name": "ストロベリー・キューピット",
+				"target": "front"
+			},
+			"6": {
+				"description": "お互いに山札からアイテムカードを2枚引く。",
+				"effect": "yayoi_heartwarming",
+				"name": "ハートウォーミング"
+			}
+		},
+		"hp": 1200,
+		"name": "高槻やよい",
+		"shop_price": 1200,
+		"skill": {
+			"description": "試合開始時に『べろちょろポーチ』を1枚手札に加える。両陣営の手札上限は3枚で、4枚目を引いた時は手札を1枚選んで捨てる。",
+			"hand_limit": 3,
+			"name": "倹約のがまぐち",
+			"starting_special_items": {
+				"berochoro_pouch": 1
+			}
+		},
+		"type": "Angel"
+	},
+	"yukiho": {
+		"affiliation": "AS",
+		"attribute": "Vi",
+		"card_image_path": "res://assets/cards/characters/萩原 雪歩.png",
+		"dex": 5,
+		"dice_actions": {
+			"1": {
+				"description": "相手1人に無条件600ダメージを与える。その後ダイスを振り、1・2が出ると対象のスキルを試合中無効にする。",
+				"effect": "yukiho_alright",
+				"name": "ALRIGHT*",
+				"target": "any",
+				"unconditional_damage": 600
+			},
+			"2": {
+				"description": "目の前の相手に無条件300ダメージを与える。",
+				"effect": "yukiho_kosmos_cosmos",
+				"name": "Kosmos, Cosmos",
+				"target": "front",
+				"unconditional_damage": 300
+			},
+			"3": {
+				"description": "目の前の相手に無条件300ダメージを与える。",
+				"effect": "yukiho_kosmos_cosmos",
+				"name": "Kosmos, Cosmos",
+				"target": "front",
+				"unconditional_damage": 300
+			},
+			"4": {
+				"description": "目の前の相手に無条件300ダメージを与える。",
+				"effect": "yukiho_kosmos_cosmos",
+				"name": "Kosmos, Cosmos",
+				"target": "front",
+				"unconditional_damage": 300
+			},
+			"5": {
+				"description": "次のターンに『ALRIGHT*』を使用する。その『ALRIGHT*』は、スキルを無効にする出目に3を追加する。",
+				"effect": "yukiho_humming_road",
+				"name": "ハミングロード"
+			},
+			"6": {
+				"description": "相手のバリアをすべて解除する。相手にバリアがない場合、相手全体に無条件200ダメージを与える。",
+				"effect": "yukiho_plumeria",
+				"name": "プルメリアの花"
+			}
+		},
+		"hp": 1300,
+		"name": "萩原 雪歩",
+		"shop_price": 1200,
+		"skill": {
+			"description": "試合開始時、目の前の相手のスキルを試合中無効にする。対象の試合開始時効果も発動せず、雪歩がリタイアしても無効化は続く。",
+			"disable_front_opponent_skill_at_battle_start": true,
+			"name": "穴を掘ります～！"
+		},
+		"type": "Princess"
+	},
 	"yuriko": {
+		"affiliation": "ミリオンスターズ",
 		"attribute": "Vi",
 		"card_image_path": "res://assets/cards/characters/七尾百合子.png",
 		"dex": 3,
 		"dice_actions": {
 			"1": {
-				"description": "相手1人に無条件500ダメージを与え、自身にアピールポイントを2点付与する。",
+				"description": "相手1人に無条件500ダメージを与え、自身にアピールポイントを3点付与する。",
 				"effect": "yuriko_bungaku",
 				"name": "空想文学少女",
 				"target": "any",
@@ -2049,12 +2890,12 @@
 				"name": "地球儀にない国"
 			},
 			"4": {
-				"description": "自身にアピールポイントを1点付与し、相手1人に【自身のAP×100】ダメージを与える。",
+				"description": "自身にアピールポイントを付与する（この試合で初めて使った場合は2点、2回目以降は1点）。相手1人に【自身のAP×100】ダメージを与える。",
 				"effect": "yuriko_prologue",
 				"name": "透明なプロローグ"
 			},
 			"5": {
-				"description": "自身にアピールポイントを1点付与し、相手1人に【自身のAP×100】ダメージを与える。",
+				"description": "自身にアピールポイントを付与する（この試合で初めて使った場合は2点、2回目以降は1点）。相手1人に【自身のAP×100】ダメージを与える。",
 				"effect": "yuriko_prologue",
 				"name": "透明なプロローグ"
 			},
@@ -2067,7 +2908,7 @@
 		"hp": 1300,
 		"name": "七尾百合子",
 		"skill": {
-			"description": "試合開始時『思い出の絵本』を手札に加える。アピールポイントが3つ以上付与されたアイドルは、スタンが無効になり、受ける弱点ダメージがなくなる。1ターンに一度だけ行動決定ロール時を一回振りなおせる。",
+			"description": "試合開始時『思い出の絵本』を手札に加える。アピールポイントが3つ以上付与されたアイドルは、スタンが無効になり、受ける弱点ダメージがなくなる。1ターンに一度だけ行動決定ロール時を1回振りなおせる。",
 			"name": "恋しますよ！？",
 			"starting_special_items": {
 				"omoide_no_ehon": 1
@@ -2075,37 +2916,22 @@
 		},
 		"type": "Princess"
 	},
-	"shiki": {
-		"attribute": "Vi",
-		"card_image_path": "res://assets/cards/characters/一ノ瀬 志希.png",
-		"dex": 3,
+	"riina": {
+		"affiliation": "シンデレラガールズ",
+		"attribute": "Vo",
+		"card_image_path": "res://assets/cards/characters/多田李衣菜.png",
+		"dex": 6,
 		"dice_actions": {
-			"1": {"damage": 200, "description": "相手全体に200ダメージを与える。望むなら、自分または相手の公開された手札を好きな枚数裏返す。裏返した枚数1枚につき、この技のダメージが200増える。", "effect": "shiki_himitsu_toilette", "name": "秘密のトワレ", "target": "all_opponents"},
-			"2": {"damage": 200, "description": "相手全体に200ダメージを与える。望むなら、自分または相手の公開された手札を好きな枚数裏返す。裏返した枚数1枚につき、この技のダメージが200増える。", "effect": "shiki_himitsu_toilette", "name": "秘密のトワレ", "target": "all_opponents"},
-			"3": {"damage": 300, "description": "相手1人に300ダメージを与える。望むなら、自分の手札を1枚公開する。公開した場合、自身に200のバリアを張る。", "effect": "shiki_proust_effect", "name": "PROUST EFFECT", "target": "any"},
-			"4": {"damage": 300, "description": "相手1人に300ダメージを与える。望むなら、自分の手札を1枚公開する。公開した場合、自身に200のバリアを張る。", "effect": "shiki_proust_effect", "name": "PROUST EFFECT", "target": "any"},
-			"5": {"damage": 300, "description": "正面の相手に300ダメージを与える。", "name": "クレイジークレイジー", "target": "front"},
-			"6": {"description": "山札からアイテムカードを1枚引く。望むなら、引いたカードと相手の手札をそれぞれ1枚公開する。", "effect": "shiki_nijiiro_letters", "name": "虹色letters"}
+			"1": {"damage": 300, "description": "相手1人に300ダメージを与える。自身以外の味方全体の与ダメージを100増やす（3ラウンド後の終了まで）。", "effect": "riina_twilight_sky", "name": "Twilight Sky", "target": "any"},
+			"2": {"damage": 300, "description": "相手1人に300ダメージを与える。自身以外の味方全体の与ダメージを100増やす（3ラウンド後の終了まで）。", "effect": "riina_twilight_sky", "name": "Twilight Sky", "target": "any"},
+			"3": {"damage": 100, "description": "相手1人に100ダメージを与える。その実際のダメージと同じ値だけ、選んだ味方1人（自身以外）の与ダメージを増やす（2ラウンド後の終了まで）。", "effect": "riina_sparkling_girl", "name": "Sparkling Girl", "target": "any"},
+			"4": {"description": "望むなら味方全体の与ダメージ増加を解除し、解除した数値の合計から200を引いた固定ダメージを相手1人に与える（0未満にはならない）。与えた分だけ自身を回復する。", "effect": "riina_arrowhead", "name": "Arrowhead", "target": "any"},
+			"5": {"description": "選んだ味方1人（自身以外）に現在かかっている与ダメージ増加を、対象のターン終了時まで2倍にする。", "effect": "riina_harmonics", "name": "ハーモニクス", "target": "any_idol"},
+			"6": {"description": "選んだ味方1人（自身以外）に現在かかっている与ダメージ増加を、対象のターン終了時まで2倍にする。", "effect": "riina_harmonics", "name": "ハーモニクス", "target": "any_idol"}
 		},
-		"hp": 1300,
-		"name": "一ノ瀬 志希",
-		"skill": {"description": "試合開始時、お互いの手札を1枚ずつ公開する。公開された手札の枚数に応じて、志希以外のアイドルが受けるダメージが増える（1枚につき+100）。", "name": "ギフテッドアイドル"},
-		"type": "Princess"
-	},
-	"frederica": {
-		"attribute": "Da",
-		"card_image_path": "res://assets/cards/characters/宮本フレデリカ.png",
-		"dex": 5,
-		"dice_actions": {
-			"1": {"damage": 500, "description": "相手1人に500ダメージを与える。その後、相手の手札をランダムに1枚公開する。", "effect": "frederica_cafe_au_lait", "name": "き・ま・ぐ・れ☆Café au lait!", "target": "any"},
-			"2": {"damage": 500, "description": "相手1人に500ダメージを与える。その後、相手の手札をランダムに1枚公開する。", "effect": "frederica_cafe_au_lait", "name": "き・ま・ぐ・れ☆Café au lait!", "target": "any"},
-			"3": {"damage": 200, "description": "相手1人に200ダメージを与える。相手の公開された手札が2枚以上ある場合、山札からアイテムカードを1枚引く。", "effect": "frederica_neko_yameruyo", "name": "フレデリカ、猫やめるよ", "target": "any"},
-			"4": {"damage": 200, "description": "相手1人に200ダメージを与える。相手の公開された手札が2枚以上ある場合、山札からアイテムカードを1枚引く。", "effect": "frederica_neko_yameruyo", "name": "フレデリカ、猫やめるよ", "target": "any"},
-			"5": {"damage": 300, "description": "正面の相手に300ダメージを与える。", "name": "クレイジークレイジー", "target": "front"},
-			"6": {"description": "山札からアイテムカードを1枚引く。望むなら、引いたカードと相手の手札をそれぞれ1枚公開する。", "effect": "shiki_nijiiro_letters", "name": "虹色letters"}
-		},
-		"hp": 1200,
-		"name": "宮本フレデリカ",
-		"skill": {"description": "相手の公開された手札1枚につき、自身の与えるダメージが100増える。試合中1回、自分のターン開始時に使えます。お互いの手札と捨て札をそれぞれの山札に戻してシャッフルし、3枚ずつ引きます。その後、相手の手札を1枚公開します。", "name": "プロヴァンス風味味噌汁"}
+		"hp": 1400,
+		"name": "多田 李衣菜",
+		"skill": {"description": "自身の技で味方に与ダメージ増加を付与するたび、自身に100のバリアを張る。", "name": "自分がロックだと思えばそれがロック"},
+		"type": "Fairy"
 	}
 }
