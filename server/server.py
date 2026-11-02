@@ -34,7 +34,7 @@ except (OSError, json.JSONDecodeError) as exc:
     raise RuntimeError("キャラクターデータ一覧を読み込めません: server/character_catalog.json") from exc
 
 ACTIVE_ACTOR_ACTIONS = {
-    "roll", "reroll", "keep_roll", "target_pressed", "use_sports_drink",
+    "roll", "fixed_roll", "reroll", "keep_roll", "target_pressed", "use_sports_drink",
     "use_replay_ticket", "ogami_reroll", "matsuri_reroll",
     "megumi_after_school_reroll", "birth_of_color_reroll", "emily_free_reroll",
     "subaru_reroll", "yuriko_ap_reroll", "subaru_perfect_game", "subaru_home_run",
@@ -525,7 +525,18 @@ async def handle_client(reader: asyncio.StreamReader, writer: asyncio.StreamWrit
                                     continue
                                 for character_id, lane in lane_snapshot.items():
                                     state_characters[character_id]["lane"] = lane
-                            if data.get("action") == "roll":
+                            if data.get("action") == "fixed_roll":
+                                # 効果で出目1に固定する技は乱数要求を伴わないため、
+                                # 通常のサーバー抽選結果との照合対象から分けます。
+                                if action_data.get("roll") != 1 or type(action_data.get("roll")) is not int:
+                                    await reject_room_battle(room, role, "固定技の出目を確認できませんでした。")
+                                    continue
+                                room["pending_server_rolls"][role] = None
+                                state = room.get("battle_state")
+                                if isinstance(state, dict):
+                                    state["resolution_safe"] = False
+                                    state["pending_attacks"][role] = None
+                            elif data.get("action") == "roll":
                                 submitted_rolls = data.get("data", {}).get("rolls")
                                 expected_rolls = room["pending_server_rolls"].get(role)
                                 if not isinstance(submitted_rolls, list) or submitted_rolls != expected_rolls:

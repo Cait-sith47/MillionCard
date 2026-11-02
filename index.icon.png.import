@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bydnb3jvftsx4"
-path="res://.godot/imported/index.icon.png-02f6d270330ddd4ceb6aea8cd8b34073.ctex"
+path="res://.godot/imported/index.icon.png-a9d2f4f7433eeddc29dad75f5e7f8710.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://build/web/MillionCard/index.icon.png"
-dest_files=["res://.godot/imported/index.icon.png-02f6d270330ddd4ceb6aea8cd8b34073.ctex"]
+source_file="res://build/web/index.icon.png"
+dest_files=["res://.godot/imported/index.icon.png-a9d2f4f7433eeddc29dad75f5e7f8710.ctex"]
 
 [params]
 
