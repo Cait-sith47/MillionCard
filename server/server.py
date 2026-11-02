@@ -526,9 +526,10 @@ async def handle_client(reader: asyncio.StreamReader, writer: asyncio.StreamWrit
                                 for character_id, lane in lane_snapshot.items():
                                     state_characters[character_id]["lane"] = lane
                             if data.get("action") == "fixed_roll":
-                                # 効果で出目1に固定する技は乱数要求を伴わないため、
-                                # 通常のサーバー抽選結果との照合対象から分けます。
-                                if action_data.get("roll") != 1 or type(action_data.get("roll")) is not int:
+                                # 効果で出目を固定する技は乱数要求を伴わないため、
+                                # 1～6の指定値を検証して通常の抽選結果との照合対象から分けます。
+                                fixed_roll = action_data.get("roll")
+                                if type(fixed_roll) is not int or not 1 <= fixed_roll <= 6:
                                     await reject_room_battle(room, role, "固定技の出目を確認できませんでした。")
                                     continue
                                 room["pending_server_rolls"][role] = None
